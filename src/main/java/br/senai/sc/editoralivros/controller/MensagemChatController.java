@@ -38,6 +38,7 @@ public class MensagemChatController {
 //    }
 
     @MessageMapping("/livro/{isbn}")
+
     @SendTo("/livro/{isbn}/chat")
     public MensagemChat salvarMensagem(@Payload MensagemChatDTO mensagemChatDTO){
         MensagemChat mensagemChat = new MensagemChat();
